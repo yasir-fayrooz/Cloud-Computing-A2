@@ -1,14 +1,30 @@
-<?php
-
-?>
+<? include("steamapi.php");?>
 <html>
- <body>  
- <center>
-  <div><h1>Enter Steam ID:</h1></div>
-   <a href="index.php">Home</a>    <a href="steam.php">Steam</a>    <a href="twitch.php">Twitch</a> 
- <form method="post">
-  <div><input name="steam_ID"></input> <input type="submit" value="Submit"></div>
- </center>
- </form>
-</body>
+    <head>
+    </head>
+    <body>
+	<center>
+	<? if($steamid != null) 
+	{
+	  $steam_name = $json["response"]["players"][0]["personaname"];
+	  $steam_avatar = $json["response"]["players"][0]["avatarfull"];
+	  $steamID64 = $json["response"]["players"][0]["steamid"];
+	  $display_name = $json["response"]["players"][0]["personaname"];
+	  $url = $json["response"]["players"][0]["profileurl"];
+	  $status = personaState($json['response']['players'][0]['personastate']);
+	  $joined = $join_date;
+	  
+	  echo "<h1>$steam_name</h1>";
+      echo "<img src='$steam_avatar'>";
+	  echo "<ul>";
+	  echo "<div>SteamID64: $steamID64</div>";
+	  echo "<div>Display Name: $display_name</div>";
+	  echo "<div>URL: $url<div>";
+	  echo "<div>Status: $status<div>";
+	  echo "<div>Join Date: $joined</div>";
+	  echo "</ul>";
+	}
+	?>
+	</center>
+    </body>
 </html>
