@@ -14,15 +14,22 @@
 	  $status = personaState($json['response']['players'][0]['personastate']);
 	  $joined = $join_date;
 	  
-	  echo "<h1>$steam_name</h1>";
-      echo "<img src='$steam_avatar'>";
-	  echo "<ul>";
-	  echo "<div>SteamID64: $steamID64</div>";
-	  echo "<div>Display Name: $display_name</div>";
-	  echo "<div>URL: $url<div>";
-	  echo "<div>Status: $status<div>";
-	  echo "<div>Join Date: $joined</div>";
-	  echo "</ul>";
+	  if($steamID64 == null)
+	  {
+		echo "<div>Steam user does not exist!</div>";
+	  }
+	  else
+	  {
+		  echo "<h1>$steam_name</h1>";
+		  echo "<img src='$steam_avatar'>";
+		  echo "<ul>";
+		  echo "<div>SteamID64: $steamID64</div>";
+		  echo "<div>Display Name: $display_name</div>";
+		  echo "<div>URL: $url<div>";
+		  echo "<div>Status: $status<div>";
+		  echo "<div>Join Date: $joined</div>";
+		  echo "</ul>";
+	  }
 	}
 	?>
 	</center>
