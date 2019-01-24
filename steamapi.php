@@ -69,6 +69,20 @@
     $games_count = $data->response->game_count;
     return $games_count;
 }
+
+	function hour_count($steam64)
+{
+	$api_key = "C1476CC9F0AF0F5FB1AD5C07975B8E8A";
+    $data = json_decode(file_get_contents("https://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=$api_key&steamid=$steam64&include_played_free_games=0&include_appinfo=1"));
+	$total = 0;
+	foreach($data->response->games as $mygames)
+	{
+		$total = $total + $mygames->playtime_forever;
+	}
+	$hours_count = number_format((float)$total / 60, 2, '.', '');
+	
+    return $hours_count;
+}
 	
 
 ?>

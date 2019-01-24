@@ -29,8 +29,18 @@
 		  echo "<div>Status: $status<div>";
 		  echo "<div>Join Date: $joined</div>";
 		  
-		  echo "<div>Friends Count: "; echo friend_count("$steamID64"); echo "</div>";
-		  echo "<div>Game Count: "; echo game_count("$steamID64"); echo "</div>";
+		  $profile_private = game_count("$steamID64");
+		  
+		  if($profile_private == null)
+		  {
+			echo "<div>Profile is private. No information available.</div>";
+		  }
+		  else
+		  {
+			echo "<div>Friends Count: "; echo friend_count("$steamID64"); echo "</div>";
+			echo "<div>Game Count: "; echo game_count("$steamID64"); echo "</div>";
+			echo "<div>Hours Played: "; echo hour_count("$steamID64"); echo "</div>";
+		  }
 		  echo "</ul>";
 	  }
 	}
