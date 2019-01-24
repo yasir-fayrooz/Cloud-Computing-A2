@@ -28,6 +28,9 @@
 		  echo "<div>URL: $url<div>";
 		  echo "<div>Status: $status<div>";
 		  echo "<div>Join Date: $joined</div>";
+		  
+		  echo "<div>Friends Count: "; echo friend_count("$steamID64"); echo "</div>";
+		  echo "<div>Game Count: "; echo game_count("$steamID64"); echo "</div>";
 		  echo "</ul>";
 	  }
 	}
