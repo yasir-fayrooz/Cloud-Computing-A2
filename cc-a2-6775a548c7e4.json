@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "cc-steamapi",
+  "private_key_id": "6775a548c7e49063e0692160fbd0ff56bf5a8809",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDjAUmS17Sh7Dph\nAOrwXLxsgL9RVotgIRnGxLczNymas3ue1sswxoPCzlMLF+yMYAzWycLdpMxfaZkU\nd08wG1zFuP1kuj6htV/X4PbMiK/IPZ7hoD4URHPZWVTfdsdJoiX4/BxFSj4yozeU\n676ObYGvEbtrswoeAC2sy772QZBQYBirIyxALOEAoqrilzETuPWQtAYpdzwPXNbL\neO67/6n8D5bvJslYFtVPTBmQGHiGgJYa3hgKTe/nU0IhJSYhwrisELnF/Y5/Os+9\n/ClgEJ5DSWZb/hSj+OEuGuY77wU5qwVRi+AjfIcfTIC/0GkK1diKpMTrSnYYT8u/\nwVGF/8kjAgMBAAECggEAIAI5dpw12zMtFCqF9jiNVRteXsC+TGK+eLmaP32Cv06Z\nms8cvZbwU1K2gPTxpOWSSeMPOCOZscZ5EFq2bskc7sBj8oUUecbSaeVNx49qgei2\nc4gd2MvCLh6bihr8hNR5WD9sWRTb6lX7a2NGblzgkWgFrm0DezF5P0lHdv/Nspdm\nPYdFeqnssCGv7NCqHHM+OqrdEQHXb9u7LosqZ5ETNr0eDEBU0GK6BDdfUt0/g6l7\nz5btO3kscXi5qlmWXua64QSIgPAwYmqTk7F7Lwt04bEI8rAbjm/y8gmyLEZke1wJ\nniXrxQAOE2IybIab6QtzzZaSmDId6nuw8BIK1B3diQKBgQD5OdY+Ndbgy+wscGkJ\ne+cchLVemX0g+xpGD1i/xgOWAq+6aGfXfnfFWRu6VGPt7wix6dX6L1fCjWrHa6SP\nKENjjJ5/TMMQEbHmhdVTjN+02f8N+jg4KYA6XBGsqW/iFn2R4kxM4zN4dJo+EAam\nZmped8CYZpk7dwifFrI/6hsYPwKBgQDpLNVIL8BCIvkIuT+4XSK/lzKo5U26S2Iz\nXpB2sL4V6yBKMNty7Kpv3qidOaOwDFFtUUjrAomVzMlIScKAhZ1QFoO41wKqA9mx\nK2ER0HVd88Aefbkqqvbv9Kyb8fG42WszYYVG/Ordwm4P3Cq1GvMHsEJw3fxiFvEl\naK2yY/92HQKBgQChOYUbIYEsUz8pUF7iv8C2djNOS0TjPQ22HN9w0Awp0vsTP89N\nXIbmp8qEM2uh1Gxvi7Hc8xt2xD07XKtL4OQXVjSCbYoSrx/C3Pkv34YoXI3e4OvV\niSNmnYDhjYrPW3VIFnj9lE0Ls4LEe2GR69cL3bQ94sFl8o8lO218Y1m7yQKBgF8h\nrXqgEL5q6lOG0Np1FSI5m6+Qrh+dddkjcaka/tKOdUQPntjKedbebsiGpaPDwszo\n5ukKxftZ650UishIux/br64P+sRGgeBopFfSRrAoLG/EN3GTAuBvYKTXFxmlirkR\nxoBp26DSHHlYCAyPjCvM266Uws16MrRiestXRPh5AoGAX3eAtE/terR/cd2ba78I\nhFRjYaOAfS23j+PRxI3xNBLIm8ezV2UBeCPOBeIhp6/jTtO3ydP4Pu4MFennQhRW\nE8+aN1oru1Vajx0xbf0UsjuIWT8jyQ6vwYhwrejEI0Ek7G9p/g4o7TXMW8Qb/8sU\ngbNE0lAEuNPw2M1JveMtwDo=\n-----END PRIVATE KEY-----\n",
+  "client_email": "datastore@cc-steamapi.iam.gserviceaccount.com",
+  "client_id": "107915684544623780189",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/datastore%40cc-steamapi.iam.gserviceaccount.com"
+}

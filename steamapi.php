@@ -1,5 +1,11 @@
 <?php
-
+	
+	# Includes the autoloader for libraries installed with composer
+	require __DIR__ . '/vendor/autoload.php';
+	# Imports the Google Cloud client library
+	use Google\Cloud\Datastore\DatastoreClient;
+	
+	
 	if(array_key_exists('steam_ID',$_POST)){
 	$api_key = "C1476CC9F0AF0F5FB1AD5C07975B8E8A";
 	
@@ -83,7 +89,46 @@
 	
     return $hours_count;
 }
+
+	function steam_level($steam64)
+{
+	$api_key = "C1476CC9F0AF0F5FB1AD5C07975B8E8A";
+    $data = json_decode(file_get_contents("https://api.steampowered.com/IPlayerService/GetSteamLevel/v1/?key=$api_key&steamid=$steam64"));
+	$steam_lvl = $data->response->player_level;
+    
+	return $steam_lvl;
+}
+
+	function db_add($steamID64, $display_name, $game_counts, $steam_levels, $friend_counts, $hour_counts)
+		{	
+		# Your Google Cloud Platform project ID
+		$projectId = 'cc-steamapi';
 	
+		# Instantiates a client
+		$datastore = new DatastoreClient(['projectId' => $projectId]);
+
+		# The kind for the new entity
+		$kind = 'SteamDB';
+	
+		# The name/ID for the new entity
+		$id64 = "$steamID64";
+
+		# The Cloud Datastore key for the new entity
+		$taskKey = $datastore->key($kind,$steamID64);
+
+		# Prepares the new entity
+		$task = $datastore->entity($taskKey, [
+		'SteamID64' => "$steamID64",
+		'Display Name' => "$display_name",
+		'Steam Level' => "$steam_levels",
+		'Friends Count' => "$friend_counts",
+		'Game Count' => "$game_counts",
+		'Hour Count' => "$hour_counts"
+		]);
+
+		# Saves the entity
+		$datastore->insert($task);
+	}
 
 ?>
 <html>

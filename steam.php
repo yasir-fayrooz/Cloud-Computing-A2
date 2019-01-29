@@ -1,11 +1,13 @@
-<? include("steamapi.php");?>
+<?  include("steamapi.php"); 
+?>
 <html>
     <head>
-    </head>
+	</head>
     <body>
 	<center>
 	<? if($steamid != null) 
 	{
+
 	  $steam_name = $json["response"]["players"][0]["personaname"];
 	  $steam_avatar = $json["response"]["players"][0]["avatarfull"];
 	  $steamID64 = $json["response"]["players"][0]["steamid"];
@@ -29,18 +31,28 @@
 		  echo "<div>Status: $status<div>";
 		  echo "<div>Join Date: $joined</div>";
 		  
-		  $profile_private = game_count("$steamID64");
+		  $game_counts = game_count("$steamID64");
+		  $steam_levels = steam_level("$steamID64");
+		  $friend_counts = friend_count("$steamID64");
+		  $hour_counts = hour_count("$steamID64");
 		  
-		  if($profile_private == null)
+		  if($game_counts == null)
 		  {
 			echo "<div>Profile is private. No information available.</div>";
 		  }
 		  else
 		  {
-			echo "<div>Friends Count: "; echo friend_count("$steamID64"); echo "</div>";
-			echo "<div>Game Count: "; echo game_count("$steamID64"); echo "</div>";
-			echo "<div>Hours Played: "; echo hour_count("$steamID64"); echo "</div>";
+		  	echo "<div>Steam Level: $steam_levels</div>";
+			echo "<div>Friends Count: $friend_counts</div>";
+			echo "<div>Game Count: $game_counts</div>";
+			echo "<div>Hours Played: $hour_counts</div>";
+			
+			$db_add = db_add($steamID64, $display_name, $game_counts, $steam_levels, $friend_counts, $hour_counts);
+			
+			echo "Saved to database!";
+		  
 		  }
+		  
 		  echo "</ul>";
 	  }
 	}
