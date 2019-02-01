@@ -118,12 +118,12 @@
 
 		# Prepares the new entity
 		$task = $datastore->entity($taskKey, [
-		'SteamID64' => "$steamID64",
+		'SteamID64' => $steamID64,
 		'Display Name' => "$display_name",
-		'Steam Level' => "$steam_levels",
-		'Friends Count' => "$friend_counts",
-		'Game Count' => "$game_counts",
-		'Hour Count' => "$hour_counts"
+		'Steam Level' => $steam_levels,
+		'Friends Count' => $friend_counts,
+		'Game Count' => $game_counts,
+		'Hour Count' => (float)$hour_counts
 		]);
 
 		# Saves the entity
