@@ -8,8 +8,6 @@
 		
 	$selectOption = $_POST['Orderby'];
 	
-	$steamIds = array();
-	
 	if (isset($_POST["cleardata"]))
 	{
 		# Your Google Cloud Platform project ID
@@ -18,13 +16,17 @@
 		# Instantiates a client
 		$datastore = new DatastoreClient(['projectId' => $projectId]);
 		
-		foreach($steamIds as $id)
+		$query = $datastore->query()
+		->kind('SteamDB');
+
+		$results = $datastore->runQuery($query);
+		
+		foreach($results as $SteamDB)
 		{
-			#$key = $datastore->key("SteamDB", $id);
-			#$datastore->delete($key);
+			$key = $datastore->key("SteamDB", $SteamDB['SteamID64']);
+			$datastore->delete($key);
 		}
 	}
-	
 	
 	function results($option)
 	{
@@ -76,8 +78,8 @@
 	{
 		$selectOption = "Display Name";
 	}
-	foreach (results($selectOption) as $SteamDB): 
-	$steamIds[] = $SteamDB['SteamID64']; ?>
+	
+	foreach (results($selectOption) as $SteamDB): ?>
 	<tr>
 	<td><center><?php echo $SteamDB['SteamID64']; ?></center></td>
 	<td><center><?php echo $SteamDB['Display Name']; ?></center></td>
@@ -86,7 +88,9 @@
 	<td><center><?php echo $SteamDB['Game Count']; ?></center></td>
 	<td><center><?php echo $SteamDB['Hour Count']; ?></center></td>
 	</tr>
-	<?php endforeach;?>
+	<?php 
+	endforeach;
+	?>
 	</table>
   </center> 
 </body>
