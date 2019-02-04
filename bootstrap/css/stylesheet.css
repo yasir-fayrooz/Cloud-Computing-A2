@@ -119,7 +119,7 @@ li a {
     
 }
 #homeHeading {
-
+    text-align: justify;
     font-family: 'Fredoka One';font-size:35px;
     color:white;
     text-align:center;
