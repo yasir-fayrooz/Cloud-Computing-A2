@@ -150,7 +150,7 @@
     <ul class ="nav">
   <li><a class="" href="index.php">Home</a></li>
   <li><a href="steam.php">Steam</a></li>
-  <li><a href="twitch.php">Twitch</a></li>
+  <li><a href="http://cc-assinment2.appspot.com/">Game charts</a></li>
   <li><a href="queryapi.php">SteamQuery</a></li>
 
 </ul>
