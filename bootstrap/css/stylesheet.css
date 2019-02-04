@@ -1,0 +1,469 @@
+<html>
+<style
+<link href='https://fonts.googleapis.com/css?family=Fredoka One' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Asap' rel='stylesheet'>
+nav li {margin:1.33%;width:26.6%;}
+
+@media screen and (max-width: 500px) {
+body {min-width:100%;}
+nav ul {width:96%;min-width:100px;margin:0 auto}
+nav li {display:block;width:100%;margin:10px 0px}
+nav li:first-child, nav li:last-child {float:none;}
+}
+
+body{width:60%;
+margin:0 auto;}
+
+.nav a:hover{
+    background-color: #808080
+}
+.nav{
+            
+    background-color:#f3f3f3;
+    border: 1px solid #ccc;
+    border-width: 1px 0;
+    margin:0;
+    padding:0;
+    text-align:center;
+    
+    
+          
+}
+
+.nav li{
+        display:inline-block;
+  
+            }
+li {
+    float:center;
+}
+li a {
+    color:#595959;
+    display:inline-block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.subheading {
+		font-family: "Calibri";
+		color: white;
+		display: block;
+		font-size: 400%;
+		text-align: center;
+		margin-top: 5%;
+		margin-bottom: 2%; 
+}
+
+.subheading2 {
+		font-family: "Calibri";
+		color: white;
+		display: block;
+		font-size: 30px;
+		text-align: center;
+		margin-top: 5%;
+		margin-bottom: 2%; 
+}
+#subheading3 {
+    
+}font-family: "Calibri";
+		color: black;
+		display: block;
+		font-size: 30px;
+		text-align: center;
+		margin-top: 5%;
+		margin-bottom: 2%; 
+
+.introduction {
+	font-size: 20px;
+	font-family: "Calibri";
+	color: white;
+	display: block;
+	text-align: center;
+
+}
+
+
+#contents {
+            
+            background-color:#BBC7CE;
+         
+             border-radius: 25px;
+            width:80%;
+            height: 400px;
+            margin-top:5%;
+           margin-left:10%;
+    
+            }
+#content4 {
+    background-color:#BBC7CE;
+         border: 5px solid #5c5c5c;
+            width:100%;
+            height: 360px;
+            margin-top:5%;
+    margin-bottom: 15%;
+}
+#extraInfo{
+     background-color:#BBC7CE;
+            border-radius: 50px 50px 50px 50px;
+            border: 10px solid #5c5c5c;
+            width:100%;
+            height: 100px;
+            margin-top:5%;
+}
+#heading {
+
+    font-family: 'Fredoka One';font-size:30px;
+    color:white;
+    text-align:center;
+    
+}
+#homeHeading {
+
+    font-family: 'Fredoka One';font-size:35px;
+    color:white;
+    text-align:center;
+    
+}
+#Logo{
+    
+	text-align: center;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+	
+}
+#contentINFO {
+    
+    font-family:'Calibri';font-size:22px;
+}
+#content2{
+      background-color:#BBC7CE;
+            
+            border: 5px solid #5c5c5c;
+            width:100%;
+            height: 200px;
+            margin-top:5%;
+}
+#content3 {
+     background-color:#BBC7CE;
+            
+            border: 5px solid #5c5c5c;
+            width:100%;
+            height: 559px;
+            margin-top:5%;
+}
+
+#contact{
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+}
+#text {
+    font-style:
+}
+#LABELS {
+    color:white;
+    text-align:center;
+}
+#contactsbox {		
+			font-family: "Calibri";
+            background-color:#BBC7CE;
+            border: 5px solid #5c5c5c;
+            width:100%;
+            height: 600%;
+            margin-top:5%;
+			margin-bottom: 10%;
+}
+
+#textBox {
+			font-family: "Calibri";
+			display: block; 
+			margin-left: 20%;
+			width: 30%;
+			
+}
+
+#Heading {
+    position: center;
+  z-index: 1;
+  margin-bottom: 50px;
+
+  text-align: center;
+}
+.input {
+    text-align: center;
+  position: center;
+    z-index: 2;
+    height: 45px;
+    width: 70%;
+    background-color: #ffffff;
+    font-size: 12px;
+    margin-bottom: 15px;
+    margin-left:13%;
+    border: 1px solid #ebebeb;
+    border-radius: 0;
+    padding: 15px 30px;
+    font-style: italic;
+    font-weight: 700;
+    color: black;
+}
+.input2 {
+    text-align: center;
+  position: center;
+    z-index: 2;
+    height: 30px;
+/*    width: 60%;*/
+    background-color: #ffffff;
+    font-size: 12px;
+/*
+    margin-bottom: 15px;
+    margin-left:20%;
+*/
+    border: 1px solid #ebebeb;
+    border-radius: 10px;;
+    padding: 15px 30px;
+    font-style: italic;
+    font-weight: 700;
+    color: black;
+    
+    margin: auto;
+  width: 50%;
+/*  border: 3px solid green;*/
+/*  padding: 10px;*/
+}
+.selection {
+    text-align: center;
+  position: center;
+    z-index: 2;
+    height: 30px;
+width:200px;
+    background-color: #ffffff;
+    font-size: 12px;
+/*
+    margin-bottom: 15px;
+    margin-left:20%;
+*/
+    border: 1px solid #ebebeb;
+    border-radius: 10px;
+    font-style: italic;
+    font-weight: 700;
+    color: black;
+    
+/*
+    margin: auto;
+  width: 50%;
+*/
+/*  border: 3px solid green;*/
+/*  padding: 10px;*/
+}
+.login {
+    text-align: center;
+  position: center;
+    z-index: 2;
+    height: 45px;
+    width: 30%;
+    background-color: #ffffff;
+    font-size: 12px;
+/*
+    margin-top:3%;
+    margin-bottom: 15px;
+    margin-left:35%;
+    margin-right:35%;
+*/
+    border: 1px solid #ebebeb;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-style: italic;
+    font-weight: 700;
+    color: black;
+    
+    margin: auto;
+    margin-bottom:10%;
+  width: 50%;
+/*  padding: 10px;*/
+}
+.selectionSub {
+ text-align: center;
+/*  position: center;*/
+    height: 30px;
+    width: 120px;
+    background-color: #ffffff;
+    font-size: 12px;
+
+    border: 1px solid #ebebeb;
+    border-radius: 5px;
+/*    padding: 15px 30px;*/
+    font-style: italic;
+    font-weight: 700;
+    color: black;
+
+}
+.label {
+    text-align: right;
+    clear: both;
+    float:left;
+    margin-right:15px;
+}
+.footer {
+    color:white;
+}
+.steamName {
+    font-weight:bold;
+    font-size:25px;
+}
+.steamError {
+    font-weight:bold;
+    font-size:30px;
+    color:white;
+    text-align:center;
+}
+.gap {
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:8%
+}
+.navContent {
+/*
+    margin-left:20%;
+    margin-right:20%;
+*/
+    color:black;
+}
+
+.labelThing {
+    font-size:18px;
+    color: white;
+}
+.steamContent1 {
+   background-color:#BBC7CE;
+           border-radius:5px; 
+          
+           
+            height: 370px;
+            
+    margin-right:10px;
+    float: left;
+  width: 37%;
+  overflow: hidden;
+    
+}
+.steamContent2 {
+ background-color:white;
+           border-radius:5px; 
+          
+           
+            height: 370px;
+            
+/*    margin-left:20px;*/
+
+  width: 56%;
+  overflow: hidden;
+          
+             
+}
+.steamHeading {
+    font-family:"Arial Black", Gadget, sans-serif;
+    font-size:40px;
+    
+}
+.steamDescrip {
+    
+font-family:Verdana, Geneva, sans-serif;
+    font-size:18px;
+}
+
+.homeContent {
+    color:white;
+    font-family:Verdana, Geneva, sans-serif;
+    font-size:18px;
+}
+.homeContain {
+    
+     background-color:white;
+           border-radius:10px; 
+          
+           
+            height: 370px;
+            
+    margin-right:10px;
+    float: left;
+  width: 40%;
+}
+.homeContain2 {
+     background-color:white;
+           border-radius:14px; 
+          
+           
+            height: 370px;
+            
+/*    margin-left:20px;*/
+
+/*  width: 56%;*/
+  overflow: hidden;
+
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.column {
+   float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px;
+}
+
+table.blueTable {
+  border: 1px solid #1C6EA4;
+  background-color: #EEEEEE;
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+table.blueTable td, table.blueTable th {
+  border: 1px solid #68686a;
+  padding: 3px 2px;
+}
+table.blueTable tbody td {
+  font-size: 13px;
+}
+table.blueTable tr:nth-child(even) {
+  background: #D0E4F5;
+}
+table.blueTable thead {
+  background: #666970;
+/*  background: -moz-linear-gradient(top, #8c8e94 0%, #75787e 66%, #666970 100%);*/
+/*
+  background: -webkit-linear-gradient(top, #8c8e94 0%, #75787e 66%, #666970 100%);
+  background: linear-gradient(to bottom, #8c8e94 0%, #75787e 66%, #666970 100%);
+  border-bottom: 2px solid #444444;
+*/
+}
+table.blueTable thead th {
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFFFFF;
+  border-left: 2px solid #D0E4F5;
+}
+table.blueTable thead th:first-child {
+  border-left: none;
+}
+
+table.blueTable tfoot td {
+  font-size: 14px;
+}
+table.blueTable tfoot .links {
+  text-align: right;
+}
+table.blueTable tfoot .links a{
+  display: inline-block;
+  background: #1C6EA4;
+  color: #FF694F;
+  padding: 2px 8px;
+  border-radius: 5px;
+}
+
+</style>
+</html>

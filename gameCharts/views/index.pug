@@ -1,0 +1,214 @@
+script(type='text/javascript' src='/static/jsonQ.min.js').
+script(type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js').
+head
+  meta(charset='utf-8')
+  title Game charts
+body(style = 'background: url(static/steam-defoult.jpg)')  
+.twitchCont(style='position: static; hight: 200px; width: 50%;')
+  canvas#twitchChart
+br
+br
+.stemCont(style='position: static; hight: 200px; width: 50%;')
+  canvas#steamChart
+.pieCont(style='position: relative; hight: 45%; width: 35%; margin-left: 250px')
+  br
+  br
+  form#pieFrom
+    select#pieSel(style='display: inline;')
+    select#pieSel2(style='display: inline;')
+    input#btn(type='button' value='confirm')
+  canvas#pie
+script(type='text/javascript').
+
+  var data = !{data[0]}
+  console.log(data[0])
+  var stData = !{data[1]}
+  console.log(data[1])
+  var dataq=jsonQ(data);
+  var stDataq= jsonQ(stData)
+  var stgamen=stDataq.find('game')
+  var stonline=stDataq.find('online')
+  var gamen=dataq.find('name')
+  var online=dataq.find('viewers')
+  //console.log(stgamen.value()[0]);
+  //console.log(stonline.value()[0]);
+  var ctx=document.getElementById('twitchChart');
+  var twitchBar=new Chart(ctx, {
+  type: 'horizontalBar',
+  data: {
+  labels: gamen.value(),
+  datasets: [{
+  label: 'twitch online',
+  data: online.value(),
+  backgroundColor: ['rgba(255, 99, 132, 0.2)',
+  'rgba(54, 162, 235, 0.2)',
+  'rgba(255, 206, 86, 0.2)',
+  'rgba(75, 192, 192, 0.2)',
+  'rgba(153, 102, 255, 0.2)',
+  'rgba(255, 159, 64, 0.2)',
+  'rgba(159, 242, 104, 0.2)',
+  'rgba(220, 182, 243, 0.2)',
+  'rgba(226, 73, 27, 0.2)',
+  'rgb(100, 55, 71, 0.2)',
+  'rgb(133, 24, 21, 0.2)',
+  'rgb(144, 29, 31, 0.2)',
+  'rgb(155, 11, 35, 0.2)',
+  'rgb(166, 111, 191, 0.2)',
+  'rgb(177, 5, 211, 0.2)',
+  'rgb(188, 199, 11, 0.2)',
+  'rgb(199, 200, 71, 0.2)',
+  'rgb(211, 104, 61, 0.2)',
+  'rgb(213, 114, 199, 0.2)',
+  'rgb(244, 200, 42, 0.2)',
+  'rgb(255, 120, 88, 0.2)',
+  'rgb(201, 220, 55, 0.2)',
+  'rgb(101, 20, 44, 0.2)',
+  'rgb(33, 92, 33, 0.2)'],
+  borderColor: [
+  'rgba(255,99,132,1)',
+  'rgba(54, 162, 235, 1)',
+  'rgba(255, 206, 86, 1)',
+  'rgba(75, 192, 192, 1)',
+  'rgba(153, 102, 255, 1)',
+  'rgba(255, 159, 64, 1)',
+  'rgba(159, 242, 104, 1)',
+  'rgba(220, 182, 243, 1)',
+  'rgba(226, 73, 27, 1)',
+  'rgb(254, 20, 91, 1)',
+  'rgba(226, 73, 27, 1)',
+  'rgb(100, 55, 71, 1)',
+  'rgb(133, 24, 21, 1)',
+  'rgb(144, 29, 31, 1)',
+  'rgb(155, 11, 35, 1)',
+  'rgb(166, 111, 191, 1)',
+  'rgb(177, 5, 211, 1)',
+  'rgb(188, 199, 11, 1)',
+  'rgb(199, 200, 71, 1)',
+  'rgb(211, 104, 61, 1)',
+  'rgb(213, 114, 199, 1)',
+  'rgb(244, 200, 42, 1)',
+  'rgb(255, 120, 88, 1)',
+  'rgb(201, 220, 55, 1)',
+  'rgb(101, 20, 44, 1)',
+  'rgb(33, 92, 33, 1)'
+  ],
+  borderWidth: 1,
+  options: {
+  responsive: true
+  }
+  }]
+  },
+  })
+  var stctx=document.getElementById('steamChart');
+  var stemBar=new Chart(stctx, {
+  type: 'horizontalBar',
+  data: {
+  labels: stgamen.value()[0],
+  datasets: [{
+  label: 'steam online',
+  data: stonline.value()[0],
+  backgroundColor: ['rgba(255, 99, 132, 0.2)',
+  'rgba(54, 162, 235, 0.2)',
+  'rgba(255, 206, 86, 0.2)',
+  'rgba(75, 192, 192, 0.2)',
+  'rgba(153, 102, 255, 0.2)',
+  'rgba(255, 159, 64, 0.2)',
+  'rgba(159, 242, 104, 0.2)',
+  'rgba(220, 182, 243, 0.2)',
+  'rgba(226, 73, 27, 0.2)',
+  'rgb(254, 20, 91, 0.2)',
+  'rgba(226, 73, 27, 0.2)',
+  'rgb(100, 55, 71, 0.2)',
+  'rgb(133, 24, 21, 0.2)',
+  'rgb(144, 29, 31, 0.2)',
+  'rgb(155, 11, 35, 0.2)',
+  'rgb(166, 111, 191, 0.2)',
+  'rgb(177, 5, 211, 0.2)',
+  'rgb(188, 199, 11, 0.2)',
+  'rgb(199, 200, 71, 0.2)',
+  'rgb(211, 104, 61, 0.2)',
+  'rgb(213, 114, 199, 0.2)',
+  'rgb(244, 200, 42, 0.2)',
+  'rgb(255, 120, 88, 0.2)',
+  'rgb(201, 220, 55, 0.2)',
+  'rgb(101, 20, 44, 0.2)',
+  'rgb(33, 92, 33, 0.2)'],
+  borderColor: [
+  'rgba(255,99,132,1)',
+  'rgba(54, 162, 235, 1)',
+  'rgba(255, 206, 86, 1)',
+  'rgba(75, 192, 192, 1)',
+  'rgba(153, 102, 255, 1)',
+  'rgba(255, 159, 64, 1)',
+  'rgba(159, 242, 104, 1)',
+  'rgba(220, 182, 243, 1)',
+  'rgba(226, 73, 27, 1)',
+  'rgb(254, 20, 91, 1)',
+  'rgba(226, 73, 27, 1)',
+  'rgb(100, 55, 71, 1)',
+  'rgb(133, 24, 21, 1)',
+  'rgb(144, 29, 31, 1)',
+  'rgb(155, 11, 35, 1)',
+  'rgb(166, 111, 191, 1)',
+  'rgb(177, 5, 211, 1)',
+  'rgb(188, 199, 11, 1)',
+  'rgb(199, 200, 71, 1)',
+  'rgb(211, 104, 61, 1)',
+  'rgb(213, 114, 199, 1)',
+  'rgb(244, 200, 42, 1)',
+  'rgb(255, 120, 88, 1)',
+  'rgb(201, 220, 55, 1)',
+  'rgb(101, 20, 44, 1)',
+  'rgb(33, 92, 33, 1)'
+  ],
+  borderWidth: 1,
+  options: {
+  responsive: true
+  }
+  }]
+  },
+  })
+  var select=document.getElementById('pieSel')
+  var select2=document.getElementById('pieSel2')
+  var options=stgamen.value()[0]
+  var options2=gamen.value()
+  console.log(options[2]);
+  for (var i=0; i<options.length; i++) {
+  var opt=options[i]
+  var el=document.createElement('option')
+  el.textContent=opt
+  el.value=opt
+  select.appendChild(el)
+  }
+  for (var i=0; i<options2.length; i++) {
+  var opt=options2[i]
+  var el=document.createElement('option')
+  el.textContent=opt
+  el.value=opt
+  select2.appendChild(el)
+  }
+  var piectx=document.getElementById('pie');
+  var pie=new Chart(piectx, {
+  type: 'doughnut',
+  data: {
+  datasets: [{
+  labels: [gamen.value()[0], stgamen.value()[0][0]],
+  data: [online.value()[0], stonline.value()[0][0]],
+  backgroundColor: ['rgba(255, 99, 132, 0.2)',
+  'rgba(54, 162, 235, 0.2)']
+  }],
+  labels: [gamen.value()[0], stgamen.value()[0][0]],
+  option: {
+  responsive: true
+  }
+  }
+  });
+  document.getElementById("btn").addEventListener("click", function(){
+  var choice=select.selectedIndex
+  var choice2=select2.selectedIndex
+  //console.log(choice, choice2);
+  pie.data.datasets[0].data=[online.value()[choice], stonline.value()[0][choice2]]
+  pie.data.datasets[0].labels=[online.value()[choice], stonline.value()[0][choice2]]
+  pie.data.labels=[gamen.value()[choice2], stgamen.value()[0][choice]]
+  pie.update()
+  });

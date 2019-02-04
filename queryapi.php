@@ -46,25 +46,51 @@
 	}
 ?>
 <html>
- <body>
+     <link rel = "stylesheet" type="text/css" href = "/bootstrap/css/stylesheet.css">
+    <link href='https://fonts.googleapis.com/css?family=Fredoka One' rel='stylesheet'>
+    <!-- We will cover style later. Skip down to the body tag -->
+  <link />
+    <link href='https://fonts.googleapis.com/css?family=Asap' rel='stylesheet'>
+ <body bgcolor="242b37">
  <center>
-  <div><h1>Steam Queries:</h1></div>
-     <a href="index.php">Home</a>    <a href="steam.php">Steam</a>    <a href="twitch.php">Twitch</a> <a href="queryapi.php">Steam Queries</a>
+  
+     <nav>
+    <ul class ="nav">
+  <li><a class="" href="index.php">Home</a></li>
+  <li><a href="steam.php">Steam</a></li>
+  <li><a href="twitch.php">Twitch</a></li>
+  <li><a href="queryapi.php">SteamQuery</a></li>
+
+</ul>
+  </nav>
+     
+     
+    <br>
+    <br>
+    <br>
+     
+     <header class="steamError"> Steam Table </header>
+    <br> 
+    <br> 
+    <br> 
   <form method="POST">
-  <center><b>Order by:</b> <?php echo $selectOption; ?></center>
-  <select name="Orderby">
+  <center><p class="labelThing">Order by:</p> <?php echo $selectOption; ?></center>
+  <select class=" selection "name="Orderby">
   <option name = "Display Name">Display Name</option>
   <option name = "Steam Level">Steam Level</option>
   <option name = "Friends Count">Friends Count</option>
   <option name = "Game Count">Game Count</option>
   <option name = "Hour Count">Hour Count</option>
-  <input type="submit" value="submit"></input>
+ 
   </select>
+       <input class="selectionSub" type="submit" value="submit">
   </form>
   <form method="POST">
-  <input type="submit" value="clear all data" name="cleardata" id="cleardata"></input>
+  <input class="selectionSub"type="submit" value="clear all data" name="cleardata" id="cleardata">
   </form>
-  <table border="1" cellspacing="5">
+ 
+    
+    <table class="blueTable">
   <tr>
   <td><b><center>SteamID64:</center></b></td>
   <td><b><center>Display Name:</center></b></td>
@@ -78,8 +104,8 @@
 	{
 		$selectOption = "Display Name";
 	}
-	
-	foreach (results($selectOption) as $SteamDB): ?>
+	foreach (results($selectOption) as $SteamDB): 
+	$steamIds[] = $SteamDB['SteamID64']; ?>
 	<tr>
 	<td><center><?php echo $SteamDB['SteamID64']; ?></center></td>
 	<td><center><?php echo $SteamDB['Display Name']; ?></center></td>
@@ -88,9 +114,7 @@
 	<td><center><?php echo $SteamDB['Game Count']; ?></center></td>
 	<td><center><?php echo $SteamDB['Hour Count']; ?></center></td>
 	</tr>
-	<?php 
-	endforeach;
-	?>
+	<?php endforeach;?>
 	</table>
   </center> 
 </body>

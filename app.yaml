@@ -8,5 +8,11 @@ handlers:
 - url: /static
   static_dir: static
   
+- url: /bootstrap
+  static_dir: bootstrap
+
+- url: /img
+  static_dir: img  
+
 - url: /.*
   script: index.php

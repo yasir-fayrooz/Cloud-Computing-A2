@@ -131,14 +131,43 @@
 	}
 
 ?>
+<!DOCTYPE html>
 <html>
+    <link rel = "stylesheet" type="text/css" href = "/bootstrap/css/stylesheet.css">
+    <link href='https://fonts.googleapis.com/css?family=Fredoka One' rel='stylesheet'>
+    <!-- We will cover style later. Skip down to the body tag -->
+  <link />
+    <link href='https://fonts.googleapis.com/css?family=Asap' rel='stylesheet'>
  <body>
  <center>
-  <div><h1>Enter Steam URL name or steam ID:</h1></div>
-     <a href="index.php">Home</a>    <a href="steam.php">Steam</a>    <a href="twitch.php">Twitch</a> <a href="queryapi.php">Steam Queries</a> 
- <form method="POST">
-  <div><input name="steam_ID"></input> <input type="submit" value="Submit"></div>
- </form>
+  <body bgcolor="242b37">
+<div id="Logo">
+    <img src="img/steam-logo-png-8.png" height="50%s">
+    </div>
+ <main>
+
+     <nav>
+    <ul class ="nav">
+  <li><a class="" href="index.php">Home</a></li>
+  <li><a href="steam.php">Steam</a></li>
+  <li><a href="twitch.php">Twitch</a></li>
+  <li><a href="queryapi.php">SteamQuery</a></li>
+
+</ul>
+  </nav>
+     <div class="gap">
+         <form method="POST">
+         <h1 id="heading">Search for Steam ID : </h1>
+           <input  name="steam_ID" class="input2" > 
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+            <input type="submit" name="submit" class="login" placeholder="Enter">
+         </form>
+   
+     </div>
   </center> 
 </body>
 </html>
