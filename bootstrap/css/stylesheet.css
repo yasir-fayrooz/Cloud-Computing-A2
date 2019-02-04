@@ -374,9 +374,11 @@ font-family:Verdana, Geneva, sans-serif;
 }
 
 .homeContent {
+	text-align: justify;
+    font-family: 'Fredoka One';
+	font-size:35px;
     color:white;
-    font-family:Verdana, Geneva, sans-serif;
-    font-size:18px;
+    text-align:center;
 }
 .homeContain {
     
